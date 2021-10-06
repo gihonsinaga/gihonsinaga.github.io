@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas 3 pemrograman web</title>
+
+  
+</head>
+
+<body style="background-image: url(latar2.jpg); background-size: cover;">
+    
+        <input type="number" id="kotak1" style="width: 200px; height: 20px;">
+        <br>
+        
+            <input type="number" id="kotak2" style="width: 200px; height: 20px;">
+    
+         <select id="operator">
+        <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+
+        <span>=</span>
+        <span id="hasil" >hasil</span>
+        <br>
+        <button id="submit">submit</button>
+    
+
+    <script>
+
+        const kotak1 = document.getElementById('kotak1')
+        const kotak2 = document.getElementById('kotak2')
+        const operator = document.getElementById('operator')
+        const hasil = document.getElementById('hasil')
+        const submit = document.getElementById('submit')
+
+        submit.addEventListener('click', function(){
+            
+           hasil.innerText = eval(kotak1.value + operator.value + kotak2.value)
+        })
+
+    </script>
+</body>
+</html>
